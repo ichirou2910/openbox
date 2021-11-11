@@ -320,6 +320,7 @@ void client_manage(Window window, ObPrompt *prompt)
         /* this means focus=true for window is same as config_focus_new=true */
         ((config_focus_new || settings->focus == 1) ||
          client_search_focus_tree_full(self)) &&
+        (strcmp(self->name, "RAIL") != 0) &&
         /* NET_WM_USER_TIME 0 when mapping means don't focus */
         (user_time != 0) &&
         /* this checks for focus=false for the window */
